@@ -20,7 +20,32 @@
     <input type="text" name="image" class="form-control" id="image" value="{{$post->image}}" placeholder="image">
   </div>
 
+  <div class="form-group">
+  <label for="category">Category</label>
+  <select class="form-select" id="category" name="category_id">
+    @foreach($categories as $category)
+    <option
+    {{$category->id === $post->category->id  ? 'selected' : ''}}
+     value="{{$category->id}}">{{$category->title}}</option>
+    @endforeach
 
+</select>
+  </div>
+
+  <div class="form-group">
+  <label for="tags">Tags</label>
+
+  <select class="form-select" multiple id="tags" name="tags[]">
+    @foreach($tags as $tag)
+  <option
+  @foreach($post->tags as $postTag)
+  {{$tag->id === $postTag->id  ? 'selected' : ''}}
+  @endforeach
+   value="{{$tag->id}}">{{$tag->title}}</option>
+  @endforeach
+
+</select>
+  </div>
 
 <div class="margin-top-6">
 <br/>
