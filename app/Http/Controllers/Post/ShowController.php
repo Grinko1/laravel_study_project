@@ -12,6 +12,7 @@ class ShowController extends BaseController
 {
     public function __invoke(Post $post)
     {
+        // return new PostResourse($post);
         return view('post.show', compact('post'));
     }
 }

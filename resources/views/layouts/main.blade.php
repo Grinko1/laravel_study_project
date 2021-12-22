@@ -18,10 +18,11 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-
+       
           <li class="nav-item">
-              <a class="nav-link" href="{{route('admin.post.index')}}">Main</a>
+              <a class="nav-link" href="{{route('admin.post.index')}}">Admin Panel</a>
             </li>
+        
             <li class="nav-item">
               <a class="nav-link" href="{{route('post.index')}}">Posts</a>
             </li>
@@ -32,6 +33,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link " href="{{route('contact.index')}}">Contacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{{route('login')}}">Login</a>
             </li>
            
            
